@@ -5,7 +5,6 @@
 //  Created by Shohjahon Totliboyev on 18/07/25.
 //
 
-// GENERATED FILE FROM TOKENS.JSON
 import SwiftUI
 
 @MainActor
@@ -13,94 +12,179 @@ extension DynamicTheme {
     public  static let light = DynamicTheme(
         themeType: .light,
         text: Text(
-            actionText: Color(hex: "#324420"),
-            actionTextHover: Color(hex: "#428826"),
-            actionTextPressed: Color(hex: "#326830"),
-            actionTextDisabled: Color(hex: "#070533"),
-            infoText: Color(hex: "#335367"),
-            infoTextLight: Color(hex: "#5000FF"),
-            negativeText: Color(hex: "#550000"),
-            negativeTextLight: Color(hex: "#CCCCCC"),
-            positiveText: Color(hex: "#524520"),
-            positiveTextLight: Color(hex: "#002104"),
-            warningText: Color(hex: "#FF5000"),
-            warningTextLight: Color(hex: "#FF150C"),
-            primaryText: Color(hex: "#550000"),
-            secondaryText: Color(hex: "#697518"),
-            tertiaryText: Color(hex: "#A1AB18"),
-            linkText: Color(hex: "#335367"),
-            textOnColor: Color(hex: "#FFFFFF"),
-            disabledText: Color(hex: "#020182")
+            action: Text.Action(
+                action: Color(hex: "#52AE30"),
+                actionHover: Color(hex: "#428B26"),
+                actionPressed: Color(hex: "#31681D"),
+                actionDisabled: Color(hex: "#97CE83")
+            ),
+            feedback: Text.Feedback(
+                information: Color(hex: "#3355FF"),
+                informationLight: Color(hex: "#D6DDFF"),
+                negative: Color(hex: "#E50000"),
+                negativeLight: Color(hex: "#FACCCC"),
+                positive: Color(hex: "#52AE30"),
+                positiveLight: Color(hex: "#DCEFD6"),
+                warning: Color(hex: "#FF8000"),
+                warningLight: Color(hex: "#FFE6CC")
+            ),
+            main: Text.Main(
+                primary: Color(hex: "#293244"),
+                secondary: Color(hex: "#69758E"),
+                tertiary: Color(hex: "#A1A9B8"),
+                link: Color(hex: "#3355FF"),
+                onColor: Color(hex: "#FFFFFF"),
+                disabled: Color(hex: "#D3D8E2")
+            ),
+            transparent: Text.Transparent(
+                alphaLight40: Color(hex: "#FFFFFF66"),
+                alphaLight50: Color(hex: "#FFFFFF80")
+            )
         ),
         icon: Icon(
-            iconPrimary: Color(hex: "#324520"),
-            iconSecondary: Color(hex: "#697518"),
-            iconTertiary: Color(hex: "#A1AB18"),
-            iconDisabled: Color(hex: "#070533"),
-            iconOnColor: Color(hex: "#FFFFFF"),
-            iconInteractive: Color(hex: "#335367")
-        ),
-        main: Main(
-            background: Color(hex: "#171777"),
-            backgroundSecondary: Color(hex: "#171777"),
-            backgroundTertiary: Color(hex: "#171777"),
-            backgroundElevated: Color(hex: "#1A1A8C"),
-            backgroundInverted: Color(hex: "#FFFFFF")
-        ),
-        action: Action(
-            actionPrimary: Color(hex: "#628529"),
-            actionPrimaryHover: Color(hex: "#618812"),
-            actionPrimaryPressed: Color(hex: "#20460"),
-            actionPrimaryDisabled: Color(hex: "#181512"),
-            actionSecondary: Color(hex: "#181512"),
-            actionSecondaryHover: Color(hex: "#161513"),
-            actionSecondaryPressed: Color(hex: "#203613"),
-            actionSecondaryDisabled: Color(hex: "#181512")
-        ),
-        feedback: Feedback(
-            positive: Color(hex: "#252829"),
-            positiveLight: Color(hex: "#00154"),
-            warning: Color(hex: "#250000"),
-            warningLight: Color(hex: "#11500"),
-            negative: Color(hex: "#150000"),
-            negativeLight: Color(hex: "#00000"),
-            info: Color(hex: "#152827"),
-            infoLight: Color(hex: "#152827")
-        ),
-        button: Button(
-            buttonPrimary: Color(hex: "#171777"),
-            buttonPrimaryHover: Color(hex: "#618812"),
-            buttonPrimaryPressed: Color(hex: "#20460"),
-            buttonPrimaryDisabled: Color(hex: "#181512"),
-            buttonSecondary: Color(hex: "#181512"),
-            buttonSecondaryHover: Color(hex: "#161513"),
-            buttonSecondaryPressed: Color(hex: "#203613"),
-            buttonSecondaryDisabled: Color(hex: "#181512")
-        ),
-        input: Input(
-            inputBackground: Color(hex: "#757779"),
-            inputText: Color(hex: "#393244"),
-            inputPlaceholder: Color(hex: "#020182"),
-            inputBorder: Color(hex: "#5545B0"),
-            inputFocusBorder: Color(hex: "#7955B9")
-        ),
-        transparent: Transparent(
-            clear: Color(hex: "#FFFFFF00"),
-            translucentLight: Color(hex: "#FFFFFF33"),
-            translucentDark: Color(hex: "#00000033")
-        ),
-        border: Border(
-            borderDefault: Color(hex: "#5545B0"),
-            borderLight: Color(hex: "#5558C7"),
-            borderStrong: Color(hex: "#3816B0"),
-            borderFocus: Color(hex: "#7955B9")
+            action: Icon.Action(
+                action: Color(hex: "#52AE30"),
+                actionHover: Color(hex: "#428B26"),
+                actionPressed: Color(hex: "#31681D"),
+                actionDisabled: Color(hex: "#97CE83")
+            ),
+            feedback: Icon.Feedback(
+                information: Color(hex: "#3355FF"),
+                informationLight: Color(hex: "#D6DDFF"),
+                negative: Color(hex: "#E50000"),
+                negativeLight: Color(hex: "#FACCCC"),
+                positive: Color(hex: "#52AE30"),
+                positiveLight: Color(hex: "#DCEFD6"),
+                positiveOnDark: Color(hex: "#66C285"),
+                warning: Color(hex: "#FF8000"),
+                warningLight: Color(hex: "#FFE6CC")
+            ),
+            main: Icon.Main(
+                primary: Color(hex: "#293244"),
+                secondary: Color(hex: "#69758E"),
+                tertiary: Color(hex: "#A1A9B8"),
+                link: Color(hex: "#3355FF"),
+                onColor: Color(hex: "#FFFFFF"),
+                disabled: Color(hex: "#D3D8E2")
+            ),
+            transparent: Icon.Transparent(
+                alphaLight40: Color(hex: "#FFFFFF66"),
+                alphaLight50: Color(hex: "#FFFFFF80")
+            )
         ),
         surface: Surface(
-            surfacePrimary: Color(hex: "#FFFFFF"),
-            surfaceSecondary: Color(hex: "#F5F5F5"),
-            surfaceElevated: Color(hex: "#FFFFFF"),
-            surfacePressed: Color(hex: "#E5E5E5"),
-            surfaceHover: Color(hex: "#F0F0F0")
+            page: Surface.Page(
+                page: Color(hex: "#F5F7F9"),
+                pageWhite: Color(hex: "#FFFFFF")
+            ),
+            primary: Surface.Primary(
+                primary: Color(hex: "#FFFFFF"),
+                hover: Color(hex: "#F5F7F9"),
+                pressed: Color(hex: "#EFF2F5")
+            ),
+            secondary: Surface.Secondary(
+                secondary: Color(hex: "#EFF2F5"),
+                hover: Color(hex: "#DEE2E9"),
+                pressed: Color(hex: "#D3D8E2")
+            ),
+            teritary: Surface.Teritary(teritary: Color(hex: "#F5F7F9")),
+            other: Surface.Other(disabled: Color(hex: "#F5F7F9"))
+        ),
+        action: Action(
+            action: Color(hex: "#52AE30"),
+            actionHover: Color(hex: "#428B26"),
+            actionPressed: Color(hex: "#31681D"),
+            actionMuted: Color(hex: "#DCEFD6")
+        ),
+        feedback: Feedback(
+            information: Color(hex: "#3355FF"),
+            informationLight: Color(hex: "#D6DDFF"),
+            negative: Color(hex: "#E50000"),
+            negativeLight: Color(hex: "#FACCCC"),
+            positive: Color(hex: "#52AE30"),
+            positiveLight: Color(hex: "#DCEFD6"),
+            warning: Color(hex: "#FF8000"),
+            warningLight: Color(hex: "#FFE6CC")
+        ),
+        button: Button(
+            primary: Button.Primary(
+                primary: Color(hex: "#FFE6CC"),
+                hover: Color(hex: "#428B26"),
+                pressed: Color(hex: "#31681D"),
+                disabled: Color(hex: "#EBEEF2")
+            ),
+            secondary: Button.Secondary(
+                primary: Color(hex: "#EFF2F5"),
+                hover: Color(hex: "#E4E7ED"),
+                pressed: Color(hex: "#DEE2E9"),
+                disabled: Color(hex: "#F3F5F7")
+            ),
+            ghost: Button.Ghost(
+                primary: Color(hex: "#FFFFFF00"),
+                hover: Color(hex: "#EFF2F5"),
+                pressed: Color(hex: "#EBEEF2"),
+                disabled: Color(hex: "#FFFFFF00")
+            ),
+            ghostGreen: Button.GhostGreen(
+                primary: Color(hex: "#ECF6E9"),
+                hover: Color(hex: "#E1F2DC"),
+                pressed: Color(hex: "#D7EDD1"),
+                disabled: Color(hex: "#ECF6E9")
+            ),
+            transparent: Button.Transparent(
+                primary: Color(hex: "#FFFFFF4D"),
+                hover: Color(hex: "#FFFFFF66"),
+                pressed: Color(hex: "#FFFFFF80"),
+                disabled: Color(hex: "#FFFFFF33")
+            )
+        ),
+        input: Input(
+            primary: Color(hex: "#EFF2F5"),
+            active: Color(hex: "#E4E7ED"),
+            disabled: Color(hex: "#F5F7F9")
+        ),
+        transparent: Transparent(
+            black: Transparent.Black(
+                black10: Color(hex: "#0000001A"),
+                black50: Color(hex: "#00000080"),
+                black70: Color(hex: "#000000B2")
+            ),
+            white: Transparent.White(
+                white50: Color(hex: "#FFFFFF80"),
+                white60: Color(hex: "#FFFFFF99"),
+                white75: Color(hex: "#FFFFFFBF")
+            )
+        ),
+        border: Border(
+            action: Border.Action(
+                action: Color(hex: "#52AE30"),
+                actionHover: Color(hex: "#428B26"),
+                actionPressed: Color(hex: "#DCEFD6"),
+                actionMuted: Color(hex: "#31681D")
+            ),
+            feedback: Border.Feedback(
+                information: Color(hex: "#3355FF"),
+                informationLight: Color(hex: "#D6DDFF"),
+                negative: Color(hex: "#E50000"),
+                negativeLight: Color(hex: "#FACCCC"),
+                positive: Color(hex: "#52AE30"),
+                positiveLight: Color(hex: "#DCEFD6"),
+                warning: Color(hex: "#FF8000"),
+                warningLight: Color(hex: "#FFE6CC")
+            ),
+            main: Border.Main(
+                primary: Color(hex: "#EBEEF2"),
+                secondary: Color(hex: "#DEE2E9"),
+                tertiary: Color(hex: "#D3D8E2"),
+                focus: Color(hex: "#75BE59"),
+                disabled: Color(hex: "#EFF2F5"),
+                onColor: Color(hex: "#FFFFFF")
+            ),
+            transparent: Border.Transparent(
+                black5: Color(hex: "#FFFFFF"),
+                black10: Color(hex: "#0000001A"),
+                black20: Color(hex: "#FFFFFF33")
+            )
         )
     )
     
@@ -108,94 +192,179 @@ extension DynamicTheme {
     public static let dark = DynamicTheme(
         themeType: .dark,
         text: Text(
-            actionText: Color(hex: "#1E3A8A"),
-            actionTextHover: Color(hex: "#2563EB"),
-            actionTextPressed: Color(hex: "#1D4ED8"),
-            actionTextDisabled: Color(hex: "#A5B4FC"),
-            infoText: Color(hex: "#1C3D5A"),
-            infoTextLight: Color(hex: "#60A5FA"),
-            negativeText: Color(hex: "#B91C1C"),
-            negativeTextLight: Color(hex: "#FCA5A5"),
-            positiveText: Color(hex: "#15803D"),
-            positiveTextLight: Color(hex: "#BBF7D0"),
-            warningText: Color(hex: "#D97706"),
-            warningTextLight: Color(hex: "#FDE68A"),
-            primaryText: Color(hex: "#4B5563"),
-            secondaryText: Color(hex: "#4B5563"),
-            tertiaryText: Color(hex: "#6B7280"),
-            linkText: Color(hex: "#2563EB"),
-            textOnColor: Color(hex: "#FFFFFF"),
-            disabledText: Color(hex: "#D1D5DB")
+            action: Text.Action(
+                action: Color(hex: "#52AE30"),
+                actionHover: Color(hex: "#428B26"),
+                actionPressed: Color(hex: "#31681D"),
+                actionDisabled: Color(hex: "#97CE83")
+            ),
+            feedback: Text.Feedback(
+                information: Color(hex: "#3355FF"),
+                informationLight: Color(hex: "#D6DDFF"),
+                negative: Color(hex: "#E50000"),
+                negativeLight: Color(hex: "#FACCCC"),
+                positive: Color(hex: "#52AE30"),
+                positiveLight: Color(hex: "#DCEFD6"),
+                warning: Color(hex: "#FF8000"),
+                warningLight: Color(hex: "#FFE6CC")
+            ),
+            main: Text.Main(
+                primary: Color(hex: "#DCEFD6"),
+                secondary: Color(hex: "#69758E"),
+                tertiary: Color(hex: "#A1A9B8"),
+                link: Color(hex: "#3355FF"),
+                onColor: Color(hex: "#FFFFFF"),
+                disabled: Color(hex: "#D3D8E2")
+            ),
+            transparent: Text.Transparent(
+                alphaLight40: Color(hex: "#FFFFFF66"),
+                alphaLight50: Color(hex: "#FFFFFF80")
+            )
         ),
         icon: Icon(
-            iconPrimary: Color(hex: "#2563EB"),
-            iconSecondary: Color(hex: "#60A5FA"),
-            iconTertiary: Color(hex: "#93C5FD"),
-            iconDisabled: Color(hex: "#E5E7EB"),
-            iconOnColor: Color(hex: "#FFFFFF"),
-            iconInteractive: Color(hex: "#1E3A8A")
-        ),
-        main: Main(
-            background: Color(hex: "#F9FAFB"),
-            backgroundSecondary: Color(hex: "#FFFFFF"),
-            backgroundTertiary: Color(hex: "#F3F4F6"),
-            backgroundElevated: Color(hex: "#FFFFFF"),
-            backgroundInverted: Color(hex: "#111827")
-        ),
-        action: Action(
-            actionPrimary: Color(hex: "#2563EB"),
-            actionPrimaryHover: Color(hex: "#1D4ED8"),
-            actionPrimaryPressed: Color(hex: "#1E40AF"),
-            actionPrimaryDisabled: Color(hex: "#BFDBFE"),
-            actionSecondary: Color(hex: "#F3F4F6"),
-            actionSecondaryHover: Color(hex: "#E5E7EB"),
-            actionSecondaryPressed: Color(hex: "#D1D5DB"),
-            actionSecondaryDisabled: Color(hex: "#F9FAFB")
-        ),
-        feedback: Feedback(
-            positive: Color(hex: "#15803D"),
-            positiveLight: Color(hex: "#DCFCE7"),
-            warning: Color(hex: "#D97706"),
-            warningLight: Color(hex: "#FFF7ED"),
-            negative: Color(hex: "#B91C1C"),
-            negativeLight: Color(hex: "#FEE2E2"),
-            info: Color(hex: "#2563EB"),
-            infoLight: Color(hex: "#EFF6FF")
-        ),
-        button: Button(
-            buttonPrimary: Color(hex: "#2563EB"),
-            buttonPrimaryHover: Color(hex: "#1D4ED8"),
-            buttonPrimaryPressed: Color(hex: "#1E40AF"),
-            buttonPrimaryDisabled: Color(hex: "#BFDBFE"),
-            buttonSecondary: Color(hex: "#F3F4F6"),
-            buttonSecondaryHover: Color(hex: "#E5E7EB"),
-            buttonSecondaryPressed: Color(hex: "#D1D5DB"),
-            buttonSecondaryDisabled: Color(hex: "#F9FAFB")
-        ),
-        input: Input(
-            inputBackground: Color(hex: "#FFFFFF"),
-            inputText: Color(hex: "#111827"),
-            inputPlaceholder: Color(hex: "#9CA3AF"),
-            inputBorder: Color(hex: "#D1D5DB"),
-            inputFocusBorder: Color(hex: "#2563EB")
-        ),
-        transparent: Transparent(
-            clear: Color(hex: "#FFFFFF00"),
-            translucentLight: Color(hex: "#FFFFFFAA"),
-            translucentDark: Color(hex: "#00000033")
-        ),
-        border: Border(
-            borderDefault: Color(hex: "#D1D5DB"),
-            borderLight: Color(hex: "#E5E7EB"),
-            borderStrong: Color(hex: "#9CA3AF"),
-            borderFocus: Color(hex: "#2563EB")
+            action: Icon.Action(
+                action: Color(hex: "#52AE30"),
+                actionHover: Color(hex: "#428B26"),
+                actionPressed: Color(hex: "#31681D"),
+                actionDisabled: Color(hex: "#97CE83")
+            ),
+            feedback: Icon.Feedback(
+                information: Color(hex: "#3355FF"),
+                informationLight: Color(hex: "#D6DDFF"),
+                negative: Color(hex: "#E50000"),
+                negativeLight: Color(hex: "#FACCCC"),
+                positive: Color(hex: "#52AE30"),
+                positiveLight: Color(hex: "#DCEFD6"),
+                positiveOnDark: Color(hex: "#66C285"),
+                warning: Color(hex: "#FF8000"),
+                warningLight: Color(hex: "#FFE6CC")
+            ),
+            main: Icon.Main(
+                primary: Color(hex: "#293244"),
+                secondary: Color(hex: "#69758E"),
+                tertiary: Color(hex: "#A1A9B8"),
+                link: Color(hex: "#3355FF"),
+                onColor: Color(hex: "#FFFFFF"),
+                disabled: Color(hex: "#D3D8E2")
+            ),
+            transparent: Icon.Transparent(
+                alphaLight40: Color(hex: "#FFFFFF66"),
+                alphaLight50: Color(hex: "#FFFFFF80")
+            )
         ),
         surface: Surface(
-            surfacePrimary: Color(hex: "#FFFFFF"),
-            surfaceSecondary: Color(hex: "#F9FAFB"),
-            surfaceElevated: Color(hex: "#FFFFFF"),
-            surfacePressed: Color(hex: "#F3F4F6"),
-            surfaceHover: Color(hex: "#F9FAFB")
+            page: Surface.Page(
+                page: Color(hex: "#F5F7F9"),
+                pageWhite: Color(hex: "#FFFFFF")
+            ),
+            primary: Surface.Primary(
+                primary: Color(hex: "#E50000"),
+                hover: Color(hex: "#F5F7F9"),
+                pressed: Color(hex: "#EFF2F5")
+            ),
+            secondary: Surface.Secondary(
+                secondary: Color(hex: "#EFF2F5"),
+                hover: Color(hex: "#DEE2E9"),
+                pressed: Color(hex: "#D3D8E2")
+            ),
+            teritary: Surface.Teritary(teritary: Color(hex: "#F5F7F9")),
+            other: Surface.Other(disabled: Color(hex: "#F5F7F9"))
+        ),
+        action: Action(
+            action: Color(hex: "#52AE30"),
+            actionHover: Color(hex: "#428B26"),
+            actionPressed: Color(hex: "#31681D"),
+            actionMuted: Color(hex: "#DCEFD6")
+        ),
+        feedback: Feedback(
+            information: Color(hex: "#3355FF"),
+            informationLight: Color(hex: "#D6DDFF"),
+            negative: Color(hex: "#E50000"),
+            negativeLight: Color(hex: "#FACCCC"),
+            positive: Color(hex: "#52AE30"),
+            positiveLight: Color(hex: "#DCEFD6"),
+            warning: Color(hex: "#FF8000"),
+            warningLight: Color(hex: "#FFE6CC")
+        ),
+        button: Button(
+            primary: Button.Primary(
+                primary: Color(hex: "#3355FF"),
+                hover: Color(hex: "#428B26"),
+                pressed: Color(hex: "#31681D"),
+                disabled: Color(hex: "#EBEEF2")
+            ),
+            secondary: Button.Secondary(
+                primary: Color(hex: "#EFF2F5"),
+                hover: Color(hex: "#E4E7ED"),
+                pressed: Color(hex: "#DEE2E9"),
+                disabled: Color(hex: "#F3F5F7")
+            ),
+            ghost: Button.Ghost(
+                primary: Color(hex: "#FFFFFF00"),
+                hover: Color(hex: "#EFF2F5"),
+                pressed: Color(hex: "#EBEEF2"),
+                disabled: Color(hex: "#FFFFFF00")
+            ),
+            ghostGreen: Button.GhostGreen(
+                primary: Color(hex: "#ECF6E9"),
+                hover: Color(hex: "#E1F2DC"),
+                pressed: Color(hex: "#D7EDD1"),
+                disabled: Color(hex: "#ECF6E9")
+            ),
+            transparent: Button.Transparent(
+                primary: Color(hex: "#FFFFFF4D"),
+                hover: Color(hex: "#FFFFFF66"),
+                pressed: Color(hex: "#FFFFFF80"),
+                disabled: Color(hex: "#FFFFFF33")
+            )
+        ),
+        input: Input(
+            primary: Color(hex: "#EFF2F5"),
+            active: Color(hex: "#E4E7ED"),
+            disabled: Color(hex: "#F5F7F9")
+        ),
+        transparent: Transparent(
+            black: Transparent.Black(
+                black10: Color(hex: "#0000001A"),
+                black50: Color(hex: "#00000080"),
+                black70: Color(hex: "#000000B2")
+            ),
+            white: Transparent.White(
+                white50: Color(hex: "#FFFFFF80"),
+                white60: Color(hex: "#FFFFFF99"),
+                white75: Color(hex: "#FFFFFFBF")
+            )
+        ),
+        border: Border(
+            action: Border.Action(
+                action: Color(hex: "#52AE30"),
+                actionHover: Color(hex: "#428B26"),
+                actionPressed: Color(hex: "#DCEFD6"),
+                actionMuted: Color(hex: "#31681D")
+            ),
+            feedback: Border.Feedback(
+                information: Color(hex: "#3355FF"),
+                informationLight: Color(hex: "#D6DDFF"),
+                negative: Color(hex: "#E50000"),
+                negativeLight: Color(hex: "#FACCCC"),
+                positive: Color(hex: "#52AE30"),
+                positiveLight: Color(hex: "#DCEFD6"),
+                warning: Color(hex: "#FF8000"),
+                warningLight: Color(hex: "#FFE6CC")
+            ),
+            main: Border.Main(
+                primary: Color(hex: "#EBEEF2"),
+                secondary: Color(hex: "#DEE2E9"),
+                tertiary: Color(hex: "#D3D8E2"),
+                focus: Color(hex: "#75BE59"),
+                disabled: Color(hex: "#EFF2F5"),
+                onColor: Color(hex: "#FFFFFF")
+            ),
+            transparent: Border.Transparent(
+                black5: Color(hex: "#FFFFFF"),
+                black10: Color(hex: "#0000001A"),
+                black20: Color(hex: "#FFFFFF33")
+            )
         )
     )
 }

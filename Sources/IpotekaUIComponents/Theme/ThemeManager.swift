@@ -38,6 +38,7 @@ public class ThemeManager: ObservableObject {
         useSystemTheme = false
         currentTheme = theme
     }
+
     private static func theme(for style: UIUserInterfaceStyle) -> DynamicTheme {
         switch style {
         case .dark: return .dark

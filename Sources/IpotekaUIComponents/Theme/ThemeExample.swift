@@ -18,16 +18,18 @@ public struct HomeView: View {
         
         VStack(spacing: 20) {
             Text("Theme Demo")
-                .foregroundColor(theme.text.primaryText)
+                .font(.heading(.s(.semiboldCompressed)))
+                .foregroundColor(theme.text.main.primary)
             
             HStack(spacing: 20) {
                 Button(action: {
                     themeManager.setManualTheme(DynamicTheme.dark)
                 }) {
                     Text("Confirm")
-                        .foregroundColor(theme.main.background)
+                        .foregroundColor(theme.text.main.primary)
+                        .font(.body(.xl(.semibold)))
                         .padding()
-                        .background(theme.button.buttonPrimary)
+                        .background(theme.button.primary.primary)
                         .cornerRadius(8)
                 }
                 
@@ -35,28 +37,28 @@ public struct HomeView: View {
                     themeManager.setManualTheme(DynamicTheme.light)
                 }) {
                     Text("Cancel")
-                        .foregroundColor(theme.action.actionSecondary)
+                        .foregroundColor(theme.action.action)
                         .padding()
-                        .background(theme.surface.surfacePrimary)
+                        .background(theme.surface.primary.hover)
                         .cornerRadius(8)
                 }
             }
             
             VStack(spacing: 10) {
                 Text("Text with different styles:")
-                    .foregroundColor(theme.input.inputText)
+                    .foregroundColor(theme.text.feedback.warningLight)
                 
                 Text("Title")
-                    .foregroundColor(theme.input.inputBorder)
+                    .foregroundColor(theme.text.feedback.information)
                 
                 Text("Body")
-                    .foregroundColor(theme.text.infoTextLight)
+                    .foregroundColor(theme.text.feedback.negative)
                 
                 Text("Caption")
-                    .foregroundColor(theme.border.borderDefault)
+                    .foregroundColor(theme.text.feedback.positive)
             }
             .padding()
-            .background(theme.feedback.info)
+            .background(theme.feedback.informationLight)
             .cornerRadius(8)
             
             Spacer()

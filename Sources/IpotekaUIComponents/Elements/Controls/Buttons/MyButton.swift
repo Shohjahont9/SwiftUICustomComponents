@@ -10,6 +10,7 @@ import SwiftUI
 public struct MyButton: View {
     public var body: some View {
         Text("Submit")
+            .font(.heading(.l(.bold)))
     }
 }
 
