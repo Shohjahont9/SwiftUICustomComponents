@@ -7,11 +7,36 @@
 
 import SwiftUI
 
-/*
-  This extension helps to set fonts directly
-  Ex: Text("Hello").font(.display(.l(.bold)))
-*/
-
+/// Extension on `Font` that provides a standardized typography system for the app.
+///
+/// - Purpose:
+///   Defines a set of semantic font categories (`display`, `heading`, `body`, `description`)
+///   with predefined sizes and custom weights. This ensures consistent typography
+///   usage across the app and avoids hardcoding font names/sizes in multiple places.
+///
+/// - Usage:
+///   Instead of creating custom fonts directly with `Font.custom(...)`,
+///   you can use these helper methods to maintain consistency:
+///
+///   ```swift
+///   Text("Big Title")
+///       .font(.display(.l(.bold)))         // Large display font, bold
+///
+///   Text("Section Heading")
+///       .font(.heading(.m(.semibold)))     // Medium heading, semibold
+///
+///   Text("Body content")
+///       .font(.body(.m(.regular)))         // Medium body font, regular
+///
+///   Text("Small description")
+///       .font(.description(.s(.medium)))   // Small description font, medium
+///   ```
+///
+/// - Benefits:
+///   * Centralized control of font styles
+///   * Easy to update typography across the app
+///   * Enforces design consistency
+///
 public extension Font {
     
     // MARK: - Font Categories
@@ -113,15 +138,15 @@ public extension Font {
         func font(size: CGFloat) -> Font {
             switch self {
             case .bold:
-                return Font.custom("Gilroy-Bold", size: size, relativeTo: .body)
+                return Font.custom("SourceSans3-Bold", size: size, relativeTo: .body)
             case .medium:
-                return Font.custom("Gilroy-Medium", size: size, relativeTo: .body)
+                return Font.custom("SourceSans3-Medium", size: size, relativeTo: .body)
             case .semibold:
-                return Font.custom("Gilroy-Semibold", size: size, relativeTo: .body)
+                return Font.custom("SourceSans3-Semibold", size: size, relativeTo: .body)
             case .regular:
-                return Font.custom("Gilroy-Regular", size: size, relativeTo: .body)
+                return Font.custom("SourceSans3-Regular", size: size, relativeTo: .body)
             case .semiboldCompressed:
-                return Font.custom("PTMono-Regular", size: size, relativeTo: .body)
+                return Font.custom("SourceSans3-Semibold", size: size, relativeTo: .body)
             }
         }
     }

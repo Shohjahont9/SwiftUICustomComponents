@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-/*
- ThemeManager is used to centrally manage and apply themes across an application, ensuring consistent styling, easy customization, and dynamic theme switching. It simplifies maintenance and enhances user experience by decoupling design from logic
- */
+/// ThemeManager is used to centrally manage and apply themes across an application, ensuring consistent styling, easy customization, and dynamic theme switching.
+/// It simplifies maintenance and enhances user experience by decoupling design from logic
 @MainActor
 public class ThemeManager: ObservableObject {
     @Published private(set) public var currentTheme: DynamicTheme
@@ -56,6 +55,12 @@ public struct ThemedViewModifier: ViewModifier {
     }
 }
 
+/// We use `.themed()` to inject the current theme from ThemeManager into the SwiftUI
+/// environment. This allows all child views to automatically access `\Environment(\.theme)`
+/// without needing to pass the theme manually through initializers or bindings.
+///
+/// In short: `.themed()` acts as a convenient entry point to provide and propagate
+/// the app’s current theme (DynamicTheme) across the entire view hierarchy.
 public extension View {
     func themed() -> some View {
         modifier(ThemedViewModifier())

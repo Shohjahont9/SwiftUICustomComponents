@@ -7,18 +7,49 @@
 
 import SwiftUI
 
-/*
- AppTheme will be used across the app
- */
+
+/// AppTheme will be used across the app
 public enum AppTheme: String, CaseIterable, Sendable {
     case light
     case dark
 }
 
-/*
- DynamicTheme will be used to keep all color types
- Ex: Text, Icon ...
- */
+/// `DynamicTheme` defines the centralized color palette used across the app.
+///
+/// - Purpose:
+///   Acts as a single source of truth for all color definitions (e.g. for text, icons, backgrounds),
+///   ensuring visual consistency and easier theme switching (light/dark, custom themes, etc.).
+///
+/// - Structure example:
+///   * `Text` – Groups all text-related colors, divided into categories:
+///       - `Action` → Colors for interactive elements (default, hover, pressed, disabled)
+///       - `Feedback` → Colors for status messages (info, positive, negative, warning, etc.)
+///       - `Main` → Core brand and utility colors (primary, secondary, link, disabled, etc.)
+///       - `Transparent` → Variants of colors with opacity applied
+///
+/// - Usage:
+///   Instead of using raw `Color(...)` values, access them through the theme:
+///   ```swift
+///   let theme = themeManager.currentTheme
+///
+///   Text("Primary Action")
+///       .foregroundColor(theme.text.action.action)
+///
+///   Text("Error Message")
+///       .foregroundColor(theme.text.feedback.negative)
+///
+///   Text("Disabled State")
+///       .foregroundColor(theme.text.main.disabled)
+///
+///   Text("Transparent Overlay")
+///       .foregroundColor(theme.text.transparent.alphaLight40)
+///   ```
+///
+/// - Benefits:
+///   * Consistent design language across the app
+///   * Easy theme swapping (e.g. light/dark modes)
+///   * Centralized control over color changes
+///
 public struct DynamicTheme: Sendable {
     public struct Text: Sendable {
         public let action: Action

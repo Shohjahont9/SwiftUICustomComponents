@@ -65,6 +65,7 @@ public struct HomeView: View {
         }
         .padding(.top, 150.0)
         .edgesIgnoringSafeArea(.all)
+        .themed()
     }
     
 }
